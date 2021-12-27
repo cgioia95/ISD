@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "0d3fcc74-7028-4913-a92a-5652a97bdd8a",
+		"name": "ISD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Leads",
+			"item": [
+				{
+					"name": "Get Leads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{environment}}/leads",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{environment}}",
+								"leads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Form Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"John.Doe@gmail.com\",\n\t\"phone\": \"+491738341284\",\n\t\"firstName\": \"John\",\n\t\"lastName\": \"Doe\",\n    \"message\": \"Product X\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{environment}}/leads/form",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{environment}}",
+								"leads",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manual Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"Jane.Doe@gmail.com\",\n\t\"phone\": \"+491739341284\",\n\t\"firstName\": \"Jane\",\n\t\"lastName\": \"Doe\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{environment}}/leads/manual",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{environment}}",
+								"leads",
+								"manual"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Interests",
+			"item": [
+				{
+					"name": "Manual Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"leadId\": \"ac14ff57-4207-4459-87fe-7a2300bff5d0\",\n\t\"message\": \"The law!\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{environment}}/interests/manual",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{environment}}",
+								"interests",
+								"manual"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
