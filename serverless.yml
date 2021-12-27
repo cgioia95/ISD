@@ -1,0 +1,73 @@
+service: ISD
+frameworkVersion: '2'
+
+package:
+  individually: true
+
+plugins: 
+  - serverless-plugin-typescript
+  - serverless-offline
+
+
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-2
+  lambdaHashingVersion: 20201221
+  environment:
+    Leads:
+      Ref: Leads
+    # For debugging purposes - maps exceptions back to TS file
+    NODE_OPTIONS: --enable-source-maps
+
+  versionFunctions: false
+
+functions:
+  getLeads:
+    handler: src/functions/Leads/get.handler
+    events:
+    - http:
+        path: leads
+        method: get
+    package:
+      exclude:
+        - src/**
+      include:
+        - src/functions/Leads/get.handler
+
+  interestCreateLead:
+    handler: src/functions/Interests/manualCreate.handler
+    events:
+    - http:
+        path: interests/manual
+        method: post
+    package:
+      exclude:
+        - src/**
+      include:
+        - src/functions/Interests/manualCreate.handler
+
+  manualCreateLead:
+    handler: src/functions/Leads/manualCreate.handler
+    events:
+    - http:
+        path: leads/manual
+        method: post
+    package:
+      exclude:
+        - src/**
+      include:
+        - src/functions/Leads/manualCreate.handler
+
+  formCreateLead:
+    handler: src/functions/Leads/formCreate.handler
+    events:
+    - http:
+        path: leads/form
+        method: post
+    package:
+      exclude:
+        - src/**
+      include:
+        - src/functions/Leads/formCreate.handler

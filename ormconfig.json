@@ -1,0 +1,13 @@
+{
+    "name": "isd",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "isd",
+    "synchronize": false,  
+    "entities": ["src/entities/*{.ts,.js}"],
+    "seeds": ["src/seeds/**/*{.ts,.js}"],
+    "factories": ["src/factories/**/*{.ts,.js}"]
+}

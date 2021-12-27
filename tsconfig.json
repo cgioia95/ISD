@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "target": "es5",
+    "outDir": "./build",
+    "moduleResolution": "node",
+    "lib": ["es6"],
+    "rootDir": "./",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"],
+  "emitDecoratorMetadata": true,
+  "experimentalDecorators": true,
+  "allowJs": true,
+}
