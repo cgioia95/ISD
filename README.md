@@ -9,10 +9,12 @@ ISD-API leverages the Serverless Framework to easily develop, test locally and e
 Dillinger implements a number of technologies:
 
 - NodeJs
+- Typescript
 - Serverless Stack
 - Jest
 - Docker
 - Joi
+- Postgres
 
 ## Installation
 
@@ -24,10 +26,11 @@ Install the dependencies and devDependencies:
 npm i
 ```
 
-Spin up the database locally:
+Spin up the database locally and then seed it:
 
 ```sh
 npm run db:start
+npm run seed:run
 ```
 
 To run the lambdas locally: 
