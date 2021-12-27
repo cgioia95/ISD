@@ -35,7 +35,7 @@ To run the lambdas locally:
 ```sh
 npm start
 ```
-This well expose the lambdas so they can be hit directly, via a platform such as Postman. 
+This well expose the lambdas so they can be hit directly, via a platform such as Postman (A postman collection and environment is available at `/postman`
 
 Run unit tests via: 
 ```sh
