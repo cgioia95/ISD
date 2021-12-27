@@ -45,7 +45,7 @@ Run unit tests via:
 npm test
 ```
 
-# Api Structure
+# API Structure
 
 The core of the API is facilitating the creation of leads and their associated interests.
 
